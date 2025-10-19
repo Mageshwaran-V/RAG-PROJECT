@@ -1,0 +1,64 @@
+On one of the Linux terminal issue the following command - expected output is shown
+npm start
+	output:
+	> source@0.0.0 start
+	> node ./bin/www
+
+On another Linux terminal issue the following command to check the port usage - expected output is shown
+sudo lsof -i :3000
+	output:
+	COMMAND    PID    USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+	node    166489 aijuser   20u  IPv6 1110304      0t0  TCP *:3000 (LISTEN)
+
+On the same Linux terminal issue the following command - expected output is shown
+nodemon
+
+	output:
+	nodemon] 3.1.9
+	[nodemon] to restart at any time, enter `rs`
+	[nodemon] watching path(s): *.*
+	[nodemon] watching extensions: js,mjs,cjs,json
+	[nodemon] starting `node app.js`
+	[nodemon] clean exit - waiting for changes before restart
+	
+On Windows, on postman select/type
+
+POST	http://192.168.0.102:3000/conversation
+        {
+        	"message" : "What does cashless facility mean ?"
+        }
+        
+        Check the correctness of the output
+        
+        
+        app.js
+├── bin
+│   └── www
+├── context.txt
+├── docs
+│   └── health_policy.pdf
+├── index.html
+├── models
+│   └── index.ts
+
+-rw-rw-r--   1 aijuser aijuser   1116 May 15 15:38 app.js
+drwxr-xr-x   2 aijuser aijuser   4096 May 19 12:20 bin
+-rw-rw-r--   1 aijuser aijuser 105269 May 19 14:01 context.txt
+drwxrwxr-x   2 aijuser aijuser   4096 May 15 14:48 docs
+-rw-rw-r--   1 aijuser aijuser    295 May 19 12:47 .env
+drwxrwxr-x   7 aijuser aijuser   4096 Mar 26 23:08 .git
+-rw-rw-r--   1 aijuser aijuser     13 May 13 15:10 .gitignore
+-rw-rw-r--   1 aijuser aijuser   3382 May 15 16:25 index.html
+drwxrwxr-x   2 aijuser aijuser   4096 May 14 13:33 models
+-rw-rw-r--   1 aijuser aijuser      0 May 20 00:24 node
+drwxrwxr-x 183 aijuser aijuser  69632 May 17 11:33 node_modules
+-rw-rw-r--   1 aijuser aijuser    761 May 19 12:05 package.json
+-rw-r--r--   1 aijuser aijuser  12288 May 12 14:08 .package.json.swp
+-rw-rw-r--   1 aijuser aijuser  88489 May 19 12:06 package-lock.json
+-rw-rw-r--   1 aijuser aijuser     98 Mar 31 10:05 pre-process
+drwxr-xr-x   5 aijuser aijuser   4096 Mar 26 22:53 public
+drwxr-xr-x   2 aijuser aijuser   4096 May 19 18:32 routes
+-rw-rw-r--   1 aijuser aijuser      0 May 20 00:24 source@0.0.0
+drwxr-xr-x   2 aijuser aijuser   4096 May 15 12:24 views
+
+
